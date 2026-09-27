@@ -1,0 +1,135 @@
+{
+  "summary": {
+    "questions": 52,
+    "production_config": "hybrid (FAISS + BM25, RRF) + cross-encoder rerank",
+    "with_rerank": {
+      "recall@1": 0.75,
+      "recall@3": 0.846,
+      "recall@5": 0.904,
+      "mrr@10": 0.817
+    },
+    "without_rerank": {
+      "recall@1": 0.615,
+      "recall@3": 0.788,
+      "recall@5": 0.885,
+      "mrr@10": 0.714
+    }
+  },
+  "questions": 52,
+  "definition": "recall@k = share of questions with >=1 gold chunk in top k; MRR over top 10",
+  "latency_note": "local CPU (Apple Silicon), warm process, per query",
+  "query_encoder_parity_vs_sentence_transformers_fp32": {
+    "min_cosine": 0.9655,
+    "mean_cosine": 0.9817
+  },
+  "results": {
+    "vector [int8 ONNX query encoder/reranker]": {
+      "recall@1": 0.654,
+      "recall@3": 0.827,
+      "recall@5": 0.865,
+      "recall@10": 0.981,
+      "mrr@10": 0.751,
+      "p50_ms": 2.5,
+      "p95_ms": 2.9
+    },
+    "vector+rerank [int8 ONNX query encoder/reranker]": {
+      "recall@1": 0.75,
+      "recall@3": 0.827,
+      "recall@5": 0.942,
+      "recall@10": 0.981,
+      "mrr@10": 0.815,
+      "p50_ms": 145.2,
+      "p95_ms": 154.6
+    },
+    "bm25 [int8 ONNX query encoder/reranker]": {
+      "recall@1": 0.558,
+      "recall@3": 0.75,
+      "recall@5": 0.808,
+      "recall@10": 0.827,
+      "mrr@10": 0.663,
+      "p50_ms": 0.2,
+      "p95_ms": 0.3
+    },
+    "bm25+rerank [int8 ONNX query encoder/reranker]": {
+      "recall@1": 0.75,
+      "recall@3": 0.827,
+      "recall@5": 0.865,
+      "recall@10": 0.865,
+      "mrr@10": 0.794,
+      "p50_ms": 140.6,
+      "p95_ms": 143.6
+    },
+    "hybrid [int8 ONNX query encoder/reranker]": {
+      "recall@1": 0.615,
+      "recall@3": 0.788,
+      "recall@5": 0.885,
+      "recall@10": 0.962,
+      "mrr@10": 0.714,
+      "p50_ms": 3.1,
+      "p95_ms": 3.8
+    },
+    "hybrid+rerank [int8 ONNX query encoder/reranker]": {
+      "recall@1": 0.75,
+      "recall@3": 0.846,
+      "recall@5": 0.904,
+      "recall@10": 0.981,
+      "mrr@10": 0.817,
+      "p50_ms": 148.5,
+      "p95_ms": 232.9
+    },
+    "vector [fp32 ONNX query encoder/reranker]": {
+      "recall@1": 0.635,
+      "recall@3": 0.827,
+      "recall@5": 0.885,
+      "recall@10": 1.0,
+      "mrr@10": 0.75,
+      "p50_ms": 4.0,
+      "p95_ms": 4.5
+    },
+    "vector+rerank [fp32 ONNX query encoder/reranker]": {
+      "recall@1": 0.75,
+      "recall@3": 0.846,
+      "recall@5": 0.923,
+      "recall@10": 0.981,
+      "mrr@10": 0.814,
+      "p50_ms": 131.8,
+      "p95_ms": 165.6
+    },
+    "bm25 [fp32 ONNX query encoder/reranker]": {
+      "recall@1": 0.558,
+      "recall@3": 0.75,
+      "recall@5": 0.808,
+      "recall@10": 0.827,
+      "mrr@10": 0.663,
+      "p50_ms": 0.2,
+      "p95_ms": 0.3
+    },
+    "bm25+rerank [fp32 ONNX query encoder/reranker]": {
+      "recall@1": 0.75,
+      "recall@3": 0.827,
+      "recall@5": 0.865,
+      "recall@10": 0.865,
+      "mrr@10": 0.794,
+      "p50_ms": 126.9,
+      "p95_ms": 135.1
+    },
+    "hybrid [fp32 ONNX query encoder/reranker]": {
+      "recall@1": 0.654,
+      "recall@3": 0.769,
+      "recall@5": 0.904,
+      "recall@10": 0.962,
+      "mrr@10": 0.732,
+      "p50_ms": 3.5,
+      "p95_ms": 4.0
+    },
+    "hybrid+rerank [fp32 ONNX query encoder/reranker]": {
+      "recall@1": 0.75,
+      "recall@3": 0.846,
+      "recall@5": 0.904,
+      "recall@10": 0.981,
+      "mrr@10": 0.817,
+      "p50_ms": 133.3,
+      "p95_ms": 135.4
+    }
+  }
+}

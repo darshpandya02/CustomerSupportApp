@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: supporttest
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/supporttest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked --group dev
+      # Unit tests (retrieval, routing, gateway client, RAG with a mocked gateway)
+      # and API tests against a real Postgres.
+      - run: uv run pytest -q
+      - name: Artifacts load and the index matches the chunk file
+        run: >
+          uv run python -c "from supportbot.retrieval import get_retriever as g; r=g();
+          assert r.index.ntotal == len(r.chunks), (r.index.ntotal, len(r.chunks)); print(r.index.ntotal, 'chunks')"

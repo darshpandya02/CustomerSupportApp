@@ -1,0 +1,9 @@
+.venv
+.git
+.vercel
+.env*
+data
+tests
+scripts
+eval
+reports/screens

@@ -1,0 +1,16 @@
+{
+  "source": "Nextcloud user manual (stable)",
+  "source_url": "https://docs.nextcloud.com/server/stable/user_manual/en/",
+  "license": "CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)",
+  "attribution": "Nextcloud GmbH and the Nextcloud documentation contributors",
+  "pages": 88,
+  "chunks": 457,
+  "words_per_chunk": {
+    "mean": 91.8,
+    "max": 220
+  },
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "query_prefix": "Represent this sentence for searching relevant passages: ",
+  "dim": 384,
+  "index": "faiss.IndexFlatIP (cosine on normalised vectors)"
+}

@@ -1,0 +1,11 @@
+/.venv
+/.github
+/data
+/tests
+/scripts
+/eval
+/reports/screens
+/Dockerfile
+/.dockerignore
+/*.md
+/artifacts/onnx/*/model.onnx

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent dashboard · Customer Support Assistant</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">Agent dashboard</div>
+    <nav>
+      <a href="/">Chat</a>
+      <a href="/api/docs">API docs</a>
+      <button id="logout" class="link" type="button" hidden>Log out</button>
+    </nav>
+  </header>
+
+  <main class="dash">
+    <form id="login" class="card login" hidden>
+      <h2>Agent login</h2>
+      <p class="muted">The demo password is in the project README.</p>
+      <input id="pw" type="password" autocomplete="current-password" placeholder="Password" required>
+      <button type="submit">Log in</button>
+      <p id="login-err" class="error"></p>
+    </form>
+
+    <section id="app" hidden>
+      <div id="stats" class="stats"></div>
+      <div class="filters">
+        <select id="f-queue"><option value="">All queues</option><option>billing</option><option>technical</option><option>account</option></select>
+        <select id="f-status"><option value="">All statuses</option><option>open</option><option>in_progress</option><option>waiting_on_customer</option><option>resolved</option><option>closed</option></select>
+        <select id="f-priority"><option value="">All priorities</option><option>urgent</option><option>high</option><option>normal</option><option>low</option></select>
+        <input id="f-q" type="search" placeholder="Search subject or ref">
+        <button id="refresh" type="button" class="secondary">Refresh</button>
+      </div>
+      <div class="split">
+        <table class="tickets">
+          <thead><tr><th>Ref</th><th>Subject</th><th>Queue</th><th>Priority</th><th>Status</th><th>Created</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <aside id="detail" class="card detail"><p class="muted">Select a ticket.</p></aside>
+      </div>
+    </section>
+  </main>
+  <script src="/dashboard.js"></script>
+</body>
+</html>

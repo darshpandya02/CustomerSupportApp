@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "test_tickets": 60,
+    "queue_accuracy": 0.983,
+    "rules_only_accuracy": 0.717,
+    "rule_coverage": 0.55,
+    "priority_accuracy": 0.933
+  },
+  "train": 120,
+  "test": 60,
+  "queues": {
+    "billing": 20,
+    "account": 20,
+    "technical": 20
+  },
+  "rules_only": {
+    "accuracy": 0.717,
+    "coverage": 0.55,
+    "precision_when_fired": 1.0,
+    "note": "unmatched tickets fall back to the 'technical' queue"
+  },
+  "classifier_only": {
+    "accuracy": 0.983
+  },
+  "rules_then_classifier": {
+    "accuracy": 0.983,
+    "decided_by": {
+      "rule": 33,
+      "classifier": 27
+    },
+    "confusion": {
+      "labels": [
+        "billing",
+        "technical",
+        "account"
+      ],
+      "matrix": [
+        [
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          19,
+          1
+        ],
+        [
+          0,
+          0,
+          20
+        ]
+      ]
+    },
+    "errors": [
+      {
+        "text": "The Linux client asks for my password on every boot",
+        "truth": "technical",
+        "pred": "account",
+        "method": "classifier"
+      }
+    ]
+  },
+  "priority_rules": {
+    "accuracy": 0.933,
+    "labels": {
+      "high": 7,
+      "normal": 45,
+      "low": 5,
+      "urgent": 3
+    },
+    "urgent_or_high_recall": 0.9,
+    "errors": [
+      {
+        "text": "You charged my card three times for one plan, fix this now",
+        "truth": "high",
+        "pred": "normal"
+      },
+      {
+        "text": "Is annual payment cheaper?",
+        "truth": "low",
+        "pred": "normal"
+      },
+      {
+        "text": "How do I switch the desktop client to the beta channel?",
+        "truth": "low",
+        "pred": "normal"
+      },
+      {
+        "text": "How do I change the desktop client's language?",
+        "truth": "low",
+        "pred": "normal"
+      }
+    ]
+  }
+}

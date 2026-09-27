@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Support Assistant</title>
+  <meta name="description" content="Support assistant over the Nextcloud user manual with cited answers and a ticketing backend.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">Customer Support Assistant</div>
+    <nav>
+      <a href="/dashboard.html">Agent dashboard</a>
+      <a href="/api/docs">API docs</a>
+      <a href="https://github.com/darshpandya02/CustomerSupportApp">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="about">
+      <h1>Ask the Nextcloud manual</h1>
+      <p>This assistant answers questions about the Nextcloud user manual (files, sharing, sync clients,
+        two-factor authentication, Calendar, Talk and more). Every answer links to the manual sections it
+        used. When the manual can't answer, it says so, and you can escalate to a human: a ticket is
+        created with this conversation attached and routed to the billing, technical or account queue.</p>
+      <p class="muted">Try asking “How do I restore a deleted folder?”, “Why is my 2FA code rejected?” or
+        “The sync client says conflicted copy, what does it mean?”</p>
+      <div id="status" class="status muted"></div>
+      <p class="fine">Knowledge base: <a href="https://docs.nextcloud.com/server/stable/user_manual/en/">Nextcloud user manual</a>
+        by Nextcloud GmbH and contributors, licensed <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        This demo is not affiliated with Nextcloud. Don't enter personal data.</p>
+    </section>
+
+    <section class="chat" aria-label="Support chat">
+      <div class="chat-head">
+        <span>Support chat</span>
+        <button id="new-chat" class="link" type="button">New conversation</button>
+      </div>
+      <div id="log" class="log" aria-live="polite"></div>
+      <form id="ask" class="ask">
+        <textarea id="msg" rows="2" maxlength="1000" placeholder="Ask a question about Nextcloud…" required></textarea>
+        <button id="send" type="submit">Send</button>
+      </form>
+      <div class="escalate-row">
+        <button id="escalate" type="button" class="secondary">Escalate to a human</button>
+      </div>
+      <form id="ticket-form" class="ticket-form" hidden>
+        <label>What do you need help with?
+          <textarea id="t-desc" rows="3" minlength="10" maxlength="4000" required></textarea></label>
+        <label>Email (optional)
+          <input id="t-email" type="email" maxlength="254" placeholder="you@example.com"></label>
+        <div class="row">
+          <button type="submit">Create ticket</button>
+          <button type="button" id="t-cancel" class="link">Cancel</button>
+        </div>
+      </form>
+      <div id="ticket-result" class="ticket-result" hidden></div>
+    </section>
+  </main>
+  <script src="/chat.js"></script>
+</body>
+</html>

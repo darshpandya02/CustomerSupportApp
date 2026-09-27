@@ -1,0 +1,60 @@
+{"text": "You charged my card three times for one plan, fix this now", "queue": "billing", "priority": "high"}
+{"text": "Could you email me the invoice for August?", "queue": "billing", "priority": "normal"}
+{"text": "What's the price difference between the standard and premium tiers?", "queue": "billing", "priority": "normal"}
+{"text": "Just curious whether you have nonprofit pricing", "queue": "billing", "priority": "low"}
+{"text": "I want to cancel before the next renewal date", "queue": "billing", "priority": "normal"}
+{"text": "Payment declined and now my workspace is read-only", "queue": "billing", "priority": "high"}
+{"text": "Our finance team needs the VAT ID printed on invoices", "queue": "billing", "priority": "normal"}
+{"text": "Refund please, I upgraded by mistake", "queue": "billing", "priority": "normal"}
+{"text": "How do I add another payment card?", "queue": "billing", "priority": "normal"}
+{"text": "Why is my bill higher than last month?", "queue": "billing", "priority": "normal"}
+{"text": "Is annual payment cheaper?", "queue": "billing", "priority": "low"}
+{"text": "Please change the company address on our billing profile", "queue": "billing", "priority": "normal"}
+{"text": "I was charged even though my trial should still be active", "queue": "billing", "priority": "normal"}
+{"text": "Does the plan include tax or is it added on top?", "queue": "billing", "priority": "normal"}
+{"text": "Need to purchase 10 more user licenses", "queue": "billing", "priority": "normal"}
+{"text": "The coupon I got by email is being rejected at checkout", "queue": "billing", "priority": "normal"}
+{"text": "Stop charging me, I closed everything last month", "queue": "billing", "priority": "normal"}
+{"text": "Can I get an itemized receipt", "queue": "billing", "priority": "normal"}
+{"text": "switch our plan to yearly and apply credit", "queue": "billing", "priority": "normal"}
+{"text": "Do you take American Express?", "queue": "billing", "priority": "normal"}
+{"text": "My account was hacked and someone changed my password", "queue": "account", "priority": "urgent"}
+{"text": "Locked out after my phone died, I have no 2FA device", "queue": "account", "priority": "high"}
+{"text": "How can I change the email address I log in with?", "queue": "account", "priority": "normal"}
+{"text": "Please permanently delete my profile", "queue": "account", "priority": "normal"}
+{"text": "I can't log in at all since yesterday", "queue": "account", "priority": "high"}
+{"text": "Where do I create an app password for my calendar client?", "queue": "account", "priority": "normal"}
+{"text": "I want to hide my phone number from other users", "queue": "account", "priority": "normal"}
+{"text": "Can I rename my login name?", "queue": "account", "priority": "normal"}
+{"text": "The password reset link has expired", "queue": "account", "priority": "normal"}
+{"text": "Remove a lost laptop from my connected devices", "queue": "account", "priority": "normal"}
+{"text": "Unknown sessions from another country are active on my account", "queue": "account", "priority": "urgent"}
+{"text": "Set up a hardware security key", "queue": "account", "priority": "normal"}
+{"text": "Change the full name that appears on my profile", "queue": "account", "priority": "normal"}
+{"text": "My backup codes are gone, how do I generate new ones?", "queue": "account", "priority": "normal"}
+{"text": "Sign me out everywhere", "queue": "account", "priority": "normal"}
+{"text": "Our new employee never got the invitation email to create an account", "queue": "account", "priority": "normal"}
+{"text": "Export all my account data", "queue": "account", "priority": "normal"}
+{"text": "SSO login redirects to an error page", "queue": "account", "priority": "normal"}
+{"text": "What does the profile visibility setting do?", "queue": "account", "priority": "low"}
+{"text": "Give my colleague ownership of my account before I leave", "queue": "account", "priority": "normal"}
+{"text": "All my files disappeared after the sync, I lost a week of work", "queue": "technical", "priority": "urgent"}
+{"text": "Desktop client stuck on 'syncing' for two days", "queue": "technical", "priority": "high"}
+{"text": "Getting conflicted copy files every time I edit on two computers", "queue": "technical", "priority": "normal"}
+{"text": "WebDAV drive on Windows shows the wrong free space", "queue": "technical", "priority": "normal"}
+{"text": "Uploads over 2 MB fail in the browser", "queue": "technical", "priority": "normal"}
+{"text": "iPhone calendar doesn't pick up new events", "queue": "technical", "priority": "normal"}
+{"text": "Talk calls drop every few minutes during client meetings", "queue": "technical", "priority": "high"}
+{"text": "Thumbnails for videos don't load", "queue": "technical", "priority": "normal"}
+{"text": "The shared link gives me a 404", "queue": "technical", "priority": "normal"}
+{"text": "External storage mount shows a yellow warning icon", "queue": "technical", "priority": "normal"}
+{"text": "Duplicate contacts after connecting Thunderbird", "queue": "technical", "priority": "normal"}
+{"text": "The Linux client asks for my password on every boot", "queue": "technical", "priority": "normal"}
+{"text": "Search doesn't return any results in the mail app", "queue": "technical", "priority": "normal"}
+{"text": "Encrypted folder is unreadable on my new laptop", "queue": "technical", "priority": "normal"}
+{"text": "How do I switch the desktop client to the beta channel?", "queue": "technical", "priority": "low"}
+{"text": "Folders deeper than 100 levels are skipped", "queue": "technical", "priority": "normal"}
+{"text": "The web interface returns a 500 error for everyone in our office", "queue": "technical", "priority": "high"}
+{"text": "Screen share shows a black screen in Chrome", "queue": "technical", "priority": "normal"}
+{"text": "Version history tab is empty for a document I edit daily", "queue": "technical", "priority": "normal"}
+{"text": "How do I change the desktop client's language?", "queue": "technical", "priority": "low"}

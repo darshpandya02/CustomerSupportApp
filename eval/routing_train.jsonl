@@ -1,0 +1,120 @@
+{"text": "I was charged twice this month", "queue": "billing"}
+{"text": "Please send me a copy of my last invoice", "queue": "billing"}
+{"text": "How do I update my credit card details", "queue": "billing"}
+{"text": "Can I get a refund for the unused months", "queue": "billing"}
+{"text": "My payment failed but I have money in the account", "queue": "billing"}
+{"text": "Why did my subscription price go up", "queue": "billing"}
+{"text": "I want to downgrade to the cheaper plan", "queue": "billing"}
+{"text": "Cancel my subscription at the end of the billing period", "queue": "billing"}
+{"text": "Do you offer student discounts", "queue": "billing"}
+{"text": "The VAT on my invoice is wrong", "queue": "billing"}
+{"text": "I need the invoice addressed to my company name", "queue": "billing"}
+{"text": "How do I switch from monthly to annual billing", "queue": "billing"}
+{"text": "My card expired, how do I pay now", "queue": "billing"}
+{"text": "I was billed after I cancelled", "queue": "billing"}
+{"text": "Can I pay by bank transfer instead of card", "queue": "billing"}
+{"text": "What does the extra charge on my statement mean", "queue": "billing"}
+{"text": "I'd like a receipt for my records", "queue": "billing"}
+{"text": "Is there a free trial before I have to pay", "queue": "billing"}
+{"text": "Please stop auto-renewal on my plan", "queue": "billing"}
+{"text": "How much does extra storage cost", "queue": "billing"}
+{"text": "The promo code didn't apply to my order", "queue": "billing"}
+{"text": "I need to change the billing email address", "queue": "billing"}
+{"text": "Can you prorate the upgrade cost", "queue": "billing"}
+{"text": "My bank flagged the payment as suspicious and declined it", "queue": "billing"}
+{"text": "Refund request for accidental purchase", "queue": "billing"}
+{"text": "Where can I download all past invoices", "queue": "billing"}
+{"text": "Pricing for 50 users on the business plan", "queue": "billing"}
+{"text": "I upgraded but still see the old plan price", "queue": "billing"}
+{"text": "Charged in the wrong currency", "queue": "billing"}
+{"text": "Do you accept PayPal", "queue": "billing"}
+{"text": "Why is there a pending authorization on my card", "queue": "billing"}
+{"text": "Payment method keeps getting rejected", "queue": "billing"}
+{"text": "I want my money back, the service didn't work", "queue": "billing"}
+{"text": "Invoice number missing on the PDF", "queue": "billing"}
+{"text": "Tax exemption certificate for our nonprofit", "queue": "billing"}
+{"text": "How do I buy more seats for my team", "queue": "billing"}
+{"text": "The trial ended and I was charged without warning", "queue": "billing"}
+{"text": "Discount for paying yearly?", "queue": "billing"}
+{"text": "Billing address update", "queue": "billing"}
+{"text": "Credit note for the outage last week", "queue": "billing"}
+{"text": "I forgot my password and the reset email never arrives", "queue": "account"}
+{"text": "My account is locked after too many login attempts", "queue": "account"}
+{"text": "How do I change the email on my account", "queue": "account"}
+{"text": "I lost my phone and can't pass two-factor authentication", "queue": "account"}
+{"text": "Please delete my account and all my data", "queue": "account"}
+{"text": "I want to rename my username", "queue": "account"}
+{"text": "Someone else logged into my account", "queue": "account"}
+{"text": "How do I enable 2FA", "queue": "account"}
+{"text": "My recovery codes don't work", "queue": "account"}
+{"text": "I can't log in, it says invalid credentials", "queue": "account"}
+{"text": "Change the display name on my profile", "queue": "account"}
+{"text": "Transfer my account to a colleague who is taking over", "queue": "account"}
+{"text": "How do I sign out of all devices", "queue": "account"}
+{"text": "I never received the verification email", "queue": "account"}
+{"text": "Merge two accounts I accidentally created", "queue": "account"}
+{"text": "My account was disabled, why", "queue": "account"}
+{"text": "Set up a passkey for login", "queue": "account"}
+{"text": "Remove an old device from my account", "queue": "account"}
+{"text": "Reset my security key", "queue": "account"}
+{"text": "I need to change the phone number used for verification", "queue": "account"}
+{"text": "Who can see my profile information", "queue": "account"}
+{"text": "Revoke an app password I created", "queue": "account"}
+{"text": "The login page keeps looping back", "queue": "account"}
+{"text": "My session expires every few minutes", "queue": "account"}
+{"text": "Update my profile picture", "queue": "account"}
+{"text": "I want to export my personal data", "queue": "account"}
+{"text": "I think my account was hacked, there are logins from another country", "queue": "account"}
+{"text": "How do I add a second admin to our organization account", "queue": "account"}
+{"text": "I got an email about a new login I did not make", "queue": "account"}
+{"text": "Unlock my account please", "queue": "account"}
+{"text": "Change the language of my account settings", "queue": "account"}
+{"text": "How do I leave an organization", "queue": "account"}
+{"text": "My SSO login stopped working", "queue": "account"}
+{"text": "I can't remember which email I signed up with", "queue": "account"}
+{"text": "Deactivate a team member's account", "queue": "account"}
+{"text": "Close my account", "queue": "account"}
+{"text": "Recover access after the authenticator app was reset", "queue": "account"}
+{"text": "Make my profile private", "queue": "account"}
+{"text": "New device password for my laptop client", "queue": "account"}
+{"text": "Password change doesn't save", "queue": "account"}
+{"text": "The desktop client is stuck syncing", "queue": "technical"}
+{"text": "Files are not uploading from my phone", "queue": "technical"}
+{"text": "I keep getting conflicted copy files", "queue": "technical"}
+{"text": "WebDAV mount on Windows is very slow", "queue": "technical"}
+{"text": "Upload fails for files larger than 2 GB", "queue": "technical"}
+{"text": "The calendar won't sync to my iPhone", "queue": "technical"}
+{"text": "Error 0x800700DF when copying files", "queue": "technical"}
+{"text": "The web interface shows a blank page", "queue": "technical"}
+{"text": "Talk video calls keep dropping", "queue": "technical"}
+{"text": "Screen sharing doesn't work in Firefox", "queue": "technical"}
+{"text": "The Android app crashes on startup", "queue": "technical"}
+{"text": "Thumbnails are not generated for my photos", "queue": "technical"}
+{"text": "Shared link returns a 404 error", "queue": "technical"}
+{"text": "External storage shows a red icon", "queue": "technical"}
+{"text": "Contacts are duplicated after syncing with Thunderbird", "queue": "technical"}
+{"text": "The sync client uses 100 percent CPU", "queue": "technical"}
+{"text": "Deleted files came back after sync", "queue": "technical"}
+{"text": "Can't open documents in the online editor", "queue": "technical"}
+{"text": "End-to-end encrypted folder cannot be opened on a new device", "queue": "technical"}
+{"text": "The macOS Finder integration disappeared", "queue": "technical"}
+{"text": "Search does not find files I know exist", "queue": "technical"}
+{"text": "Mail app can't connect to my IMAP server", "queue": "technical"}
+{"text": "Calendar reminders are not being sent", "queue": "technical"}
+{"text": "Version history is missing for a file", "queue": "technical"}
+{"text": "The desktop client says the server is unreachable", "queue": "technical"}
+{"text": "Microphone not detected in Talk calls", "queue": "technical"}
+{"text": "File drop link won't accept uploads", "queue": "technical"}
+{"text": "Sync stops at a deeply nested folder", "queue": "technical"}
+{"text": "Folder shared from external storage is empty for recipients", "queue": "technical"}
+{"text": "The client keeps asking me to log in again on Linux", "queue": "technical"}
+{"text": "Out of disk space warning even though I deleted files", "queue": "technical"}
+{"text": "Federated share to another server is not working", "queue": "technical"}
+{"text": "Recording of a call never appeared", "queue": "technical"}
+{"text": "The app is extremely slow today", "queue": "technical"}
+{"text": "Emoji reactions not showing in chat", "queue": "technical"}
+{"text": "Big folder move timed out", "queue": "technical"}
+{"text": "Trash bin won't empty", "queue": "technical"}
+{"text": "Birthday calendar is not showing up", "queue": "technical"}
+{"text": "How do I map a network drive with WebDAV", "queue": "technical"}
+{"text": "Installation of the desktop client fails on Windows 11", "queue": "technical"}
