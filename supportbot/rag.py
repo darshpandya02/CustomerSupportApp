@@ -132,6 +132,12 @@ def answer(message: str, memory: Memory | None = None, token: str | None = None,
     timings["condense_ms"] = round((time.perf_counter() - t0) * 1000, 1)
 
     res = get_retriever().search(query, k=TOP_K)
+    if query != message and (not use_llm or err):
+        # Heuristic rewrite (no LLM): keep whichever of the raw message and the
+        # history-augmented query the reranker is more confident about.
+        raw = get_retriever().search(message, k=TOP_K)
+        if raw.hits and (not res.hits or raw.hits[0].rerank >= res.hits[0].rerank):
+            res, query = raw, message
     timings.update(res.timings_ms)
     hits = res.hits
     top = hits[0].rerank if hits and hits[0].rerank is not None else float("-inf")

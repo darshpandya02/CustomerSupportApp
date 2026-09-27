@@ -1,0 +1,99 @@
+{
+  "base_url": "https://customer-support-app-woad.vercel.app",
+  "checked_at": "2026-09-27T03:48:28Z",
+  "chat": [
+    {
+      "question": "I deleted a folder by mistake. How do I get it back?",
+      "http": 200,
+      "mode": "retrieval_only",
+      "badge": "MANUAL SECTIONS",
+      "citation_links": 3,
+      "sources": [
+        "https://docs.nextcloud.com/server/stable/user_manual/en/files/deleted_file_management.html#deleted-files",
+        "https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webgui.html#navigating-your-files",
+        "https://docs.nextcloud.com/server/stable/user_manual/en/files/deleted_file_management.html#what-happens-when-shared-files-are-deleted"
+      ],
+      "client_ms": 7297,
+      "server_timings_ms": {
+        "condense_ms": 0.0,
+        "vector_ms": 15.5,
+        "first_stage_ms": 16.4,
+        "rerank_ms": 995.5,
+        "retrieval_ms": 1011.9,
+        "total_ms": 2578.1
+      }
+    },
+    {
+      "question": "My 2FA code keeps getting rejected even though I type it correctly. Why?",
+      "http": 200,
+      "mode": "retrieval_only",
+      "badge": "MANUAL SECTIONS",
+      "citation_links": 3,
+      "sources": [
+        "https://docs.nextcloud.com/server/stable/user_manual/en/user_2fa.html#recovery-codes-if-you-lose-your-second-factor",
+        "https://docs.nextcloud.com/server/stable/user_manual/en/user_2fa.html#using-two-factor-authentication",
+        "https://docs.nextcloud.com/server/stable/user_manual/en/user_2fa.html#using-client-applications-with-two-factor-authentication"
+      ],
+      "client_ms": 2109,
+      "server_timings_ms": {
+        "condense_ms": 0.0,
+        "vector_ms": 46.9,
+        "first_stage_ms": 56.4,
+        "rerank_ms": 885.3,
+        "retrieval_ms": 941.7,
+        "total_ms": 1955.2
+      }
+    },
+    {
+      "question": "What does a 'conflicted copy' file from the desktop client mean?",
+      "http": 200,
+      "mode": "retrieval_only",
+      "badge": "MANUAL SECTIONS",
+      "citation_links": 3,
+      "sources": [
+        "https://docs.nextcloud.com/server/stable/user_manual/en/desktop/conflicts.html#example",
+        "https://docs.nextcloud.com/server/stable/user_manual/en/desktop/conflicts.html#overview",
+        "https://docs.nextcloud.com/server/stable/user_manual/en/desktop/conflicts.html#uploading-conflicts-experimental"
+      ],
+      "client_ms": 1045,
+      "server_timings_ms": {
+        "condense_ms": 0.0,
+        "vector_ms": 10.2,
+        "first_stage_ms": 11.5,
+        "rerank_ms": 893.5,
+        "retrieval_ms": 905.3,
+        "total_ms": 905.4
+      }
+    },
+    {
+      "question": "I was charged twice for my subscription this month, can I get a refund?",
+      "http": 200,
+      "mode": "refusal",
+      "badge": "NOT IN THE MANUAL",
+      "citation_links": 0,
+      "sources": [],
+      "client_ms": 2031,
+      "server_timings_ms": {
+        "condense_ms": 0.0,
+        "vector_ms": 26.4,
+        "first_stage_ms": 28.0,
+        "rerank_ms": 894.4,
+        "retrieval_ms": 922.4,
+        "total_ms": 1853.3
+      }
+    }
+  ],
+  "home_status": 200,
+  "ticket": {
+    "ref": "CS-1002",
+    "queue": "billing",
+    "priority": "high",
+    "status": "open",
+    "transcript_messages": 8,
+    "routing_method": "rule"
+  },
+  "dashboard_row_queue": "billing",
+  "dashboard_transcript_messages": 8,
+  "dashboard_routing_line": "Routed by rule (matched \u201ccharged\u201d); classifier: account 2%, billing 96%, technical 2%",
+  "passed": true
+}

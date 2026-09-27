@@ -30,7 +30,7 @@ def pct(xs: list[float]) -> dict:
 def main(base: str, pause: float) -> int:
     qs = [json.loads(l)["question"] for l in (ROOT / "eval" / "questions.jsonl").open()]
     qs += [json.loads(l)["question"] for l in (ROOT / "eval" / "out_of_scope.jsonl").open()]
-    rows = []
+    rows, errors = [], []
     with httpx.Client(timeout=60) as c:
         for i, q in enumerate(qs):
             t0 = time.perf_counter()
@@ -39,7 +39,13 @@ def main(base: str, pause: float) -> int:
             if r.status_code == 429:
                 time.sleep(int(r.headers.get("Retry-After", "60")) + 1)
                 continue
-            j = r.json()
+            try:
+                j = r.json()
+            except ValueError:
+                errors.append({"q": q, "status": r.status_code, "body": r.text[:200], "rtt_ms": round(rtt)})
+                print(i, r.status_code, "non-JSON response", flush=True)
+                time.sleep(pause)
+                continue
             rows.append({"q": q, "status": r.status_code, "mode": j.get("mode"), "rtt_ms": rtt,
                          **{k: v for k, v in (j.get("timings_ms") or {}).items()}})
             print(i, r.status_code, j.get("mode"), round(rtt), j.get("timings_ms", {}).get("retrieval_ms"), flush=True)
@@ -48,7 +54,8 @@ def main(base: str, pause: float) -> int:
     report = {
         "base_url": base,
         "measured_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "requests": len(rows),
+        "requests": len(rows) + len(errors),
+        "errors": errors,
         "modes": {m: sum(1 for r in rows if r["mode"] == m) for m in {r["mode"] for r in rows}},
         "first_request_rtt_ms": round(rows[0]["rtt_ms"]),
         "summary": {

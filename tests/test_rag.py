@@ -73,3 +73,11 @@ def test_summarize_uses_llm_then_falls_back(fake_llm):
     fake_llm.fail = GatewayError("customer_verification_required", "x")
     s = rag.summarize("", [{"role": "user", "content": "2FA help"}], None)
     assert "User asked: 2FA help" in s
+
+
+def test_heuristic_rewrite_does_not_hijack_a_new_topic(unavailable_llm):
+    mem = rag.Memory(turns=[{"role": "user", "content": "I deleted a folder by mistake. How do I get it back?"},
+                            {"role": "assistant", "content": "..."}])
+    a = rag.answer("My 2FA code keeps getting rejected even though I type it correctly. Why?", mem)
+    assert a.query.startswith("My 2FA code")
+    assert all("deleted" not in c["url"] for c in a.citations)
